@@ -6,7 +6,7 @@ const SearchForm = ({search,setSearch}) => {
       <form className="searchForm" onSubmit={(e) =>e.preventDefault()}>
         <label htmlFor="searchForm">searchForm</label>
         <input type="text" name="searchForm" id="searchForm" 
-        role="searchbox"
+        role="searchbox" placeholder="🔍 Search Item"
         value={search}
         onChange={(e) =>setSearch(e.target.value)}
         />
