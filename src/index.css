@@ -15,12 +15,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
 }
 
 .App {
@@ -28,47 +22,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  height: 95vh;
-  width: 100%;
-  max-width: 700px;
-
-  background-color: white;
-  border-radius: 20px;
-  overflow: hidden;
-
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-
-  animation: fadeIn 0.7s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  height: 100vh; 
+  width: 100%; 
+  max-width: 500px;
+  border: 1px solid mediumblue;
+  margin: auto;
 }
 
 header {
   width: 100%;
-  padding: 1rem;
-
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: white;
-
+  padding: 0 0.25em;
+  background-color: mediumblue;
+  color: aliceblue;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  font-size: 1.5rem;
-  font-weight: bold;
-
-  letter-spacing: 1px;
 }
 
 main {
@@ -76,30 +44,24 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-
+  justify-content: center;
   align-items: center;
   overflow-y: auto;
-
-  padding: 10px;
 }
 
 footer {
   width: 100%;
-  padding: 0.8rem;
-
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: white;
-
+  padding: 0.25em;
+  background-color: mediumblue;
+  color: aliceblue;
   display: grid;
   place-content: center;
-
-  font-size: 0.9rem;
 }
 
 ul {
   width: 100%;
   list-style: none;
-  padding: 0.5rem;
+  padding: 0 0.25rem 0.25rem;
 }
 
 ul li::before {
@@ -110,38 +72,25 @@ ul li::before {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
-  padding: 0.8rem;
-  margin: 0.7rem 0;
-
-  background: #f8fafc;
-  border-radius: 15px;
-
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-
-  transition: all 0.3s ease;
-}
-
-.item:hover {
-  transform: scale(1.02);
-  background-color: #dbeafe;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+  background-color: #eee;
 }
 
 .item:first-child {
-  margin-top: 0;
+  margin: 0;
 }
 
 .item input[type="checkbox"] {
   text-align: center;
-
+  width: 2.5rem;
   width: 48px;
   min-width: 48px;
-
+  height: 2.5rem;
   height: 48px;
   min-height: 48px;
-
   cursor: pointer;
-  margin-right: 0.7rem;
+  margin-right: 0.5rem;
 }
 
 .item input[type="checkbox"]:focus + label {
@@ -149,29 +98,22 @@ ul li::before {
 }
 
 .item > label {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   flex-grow: 1;
-  color: #111827;
 }
 
 .item svg {
-  width: 40px;
-  min-width: 40px;
-
-  height: 40px;
-
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
   font-size: 1rem;
-  color: #2563eb;
-
+  color: steelblue;
   cursor: pointer;
-
-  transition: 0.2s ease;
 }
 
-.item svg:focus,
+.item svg:focus, 
 .item svg:hover {
   color: red;
-  transform: scale(1.2);
   outline: none;
 }
 
@@ -179,11 +121,9 @@ ul li::before {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-
-  margin: 0.7rem 0;
-  padding: 0 0.7rem 0.5rem;
-
-  gap: 10px;
+  margin: 0.5rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
 }
 
 .addForm label {
@@ -193,49 +133,30 @@ ul li::before {
 
 .addForm input[type='text'] {
   flex-grow: 1;
-
-  min-height: 50px;
-
+  max-width: calc(100% - 50px);
+  min-height: 48px;
   font-size: 1rem;
-  padding: 0.5rem;
-
-  border-radius: 12px;
-  border: 2px solid #cbd5e1;
-
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
   outline: none;
-
-  transition: 0.3s ease;
-}
-
-.addForm input[type='text']:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
 }
 
 button {
-  height: 50px;
-  min-width: 50px;
-
-  border: none;
-  border-radius: 12px;
-
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
   padding: 0.5rem;
-
   font-size: 1rem;
-  font-weight: bold;
-
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: white;
-
+  background-color: aliceblue;
+  color: mediumblue;
   cursor: pointer;
-
-  transition: all 0.3s ease;
 }
 
-button:focus,
+button:focus, 
 button:hover {
-  background: linear-gradient(135deg, #16a34a, #22c55e);
-  transform: scale(1.08);
+  color: white;
+  background-color: limegreen;
   outline: none;
 }
 
@@ -243,9 +164,9 @@ button:hover {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-
-  margin-bottom: 0.5rem;
-  padding: 0 0.7rem 0.5rem;
+  margin: 0.25rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
 }
 
 .searchForm label {
@@ -255,21 +176,10 @@ button:hover {
 
 .searchForm input[type='text'] {
   flex-grow: 1;
-
-  min-height: 50px;
-
+  max-width: 100%;
+  min-height: 48px;
   font-size: 1rem;
-  padding: 0.5rem;
-
-  border-radius: 12px;
-  border: 2px solid #cbd5e1;
-
+  padding: 0.25rem;
+  border-radius: 0.25rem;
   outline: none;
-
-  transition: 0.3s ease;
-}
-
-.searchForm input[type='text']:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
 }
